@@ -183,9 +183,9 @@ def update_setup_cfg(save_dir, package_name):
 
     for line in fileinput.input(file_name, inplace=True):
         if "script-dir" in line:
-            sys.stdout.write("script-dir=$base/lib/" + package_name + "\n")
+            sys.stdout.write("script_dir=$base/lib/" + package_name + "\n")
         elif "install-scripts" in line:
-            sys.stdout.write("install-scripts=$base/lib/" + package_name + "\n")
+            sys.stdout.write("install_scripts=$base/lib/" + package_name + "\n")
         else:
             sys.stdout.write(line)
 
